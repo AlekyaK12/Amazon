@@ -1,1 +1,6 @@
-
+<distributionManagement>
+    <repository>
+        <id>nexus</id>
+        <url>${env.NEXUS_URL}</url>
+    </repository>
+</distributionManagement>
