@@ -1,6 +1,29 @@
-<distributionManagement>
-    <repository>
-        <id>nexus</id>
-        <url>${env.NEXUS_URL}</url>
-    </repository>
-</distributionManagement>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.example</groupId>
+    <artifactId>amazon-app</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>Amazon Java Web App</name>
+    <description>Sample Java web app to deploy via Nexus</description>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+
+    <!-- ✅ This is where you tell Maven to upload your artifact -->
+    <distributionManagement>
+        <repository>
+            <id>nexus</id>
+            <url>${env.NEXUS_URL}</url>
+        </repository>
+    </distributionManagement>
+
+</project>
